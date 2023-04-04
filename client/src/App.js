@@ -1,5 +1,5 @@
 import React from 'react';
-import { ApolloClient, InMemoryCahce, ApolloProvider } from '@apollo/client'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import SearchBooks from './pages/SearchBooks';
@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 
 const client = new ApolloClient({
   uri: 'graphql',
-  cache: new InMemoryCahce()
+  cache: new InMemoryCache()
 })
 
 function App() {
